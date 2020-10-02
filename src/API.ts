@@ -4,7 +4,7 @@ const baseUrl: string = "http://localhost:4000";
 
 export const geTodos = async (): Promise<AxiosResponse<ApiDataType>> => {
     try {
-        const todos: AxosResponse<ApiData> = await axios.get(
+        const todos: AxiosResponse<ApiDataType> = await axios.get(
             baseUrl + "/todos"
 
         )
