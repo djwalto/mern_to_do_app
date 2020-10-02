@@ -5,7 +5,7 @@ import todoRoutes from "./routes";
 
 const app: Express = express();
 
-const PORT: string | nmber = process.env.PORT || 4000;
+const PORT: string | number = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(todoRoutes);
