@@ -2,6 +2,6 @@
     "env": {
         "MONGO_USER": "new_user_1",
         "MONGO_PASSWORD": "Baw6Anw1",
-        "MONGO_DB": "to_do_app"
+        "MONGO_DB": "to_do_app.to_do_app"
     }
 }
