@@ -1,7 +1,7 @@
 {
     "env": {
         "MONGO_USER": "new_user_1",
-        "MONGO_PASSWORD": "newuser",
-        "MONGO_DB": "6NSrBVcFDICKa9xh"
+        "MONGO_PASSWORD": "6NSrBVcFDICKa9xh",
+        "MONGO_DB": "to_do_app"
     }
 }

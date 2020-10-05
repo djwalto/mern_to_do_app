@@ -19,5 +19,6 @@ mongoose_1.default
     .connect(uri, options)
     .then(() => app.listen(PORT, () => console.log(`Server running on localhost ${PORT}`)))
     .catch(error => {
-    throw error;
-});
+
+        console.log(error, process.env.MONGO_USER, process.env.MONGO_PASSWORD, process.env.MONGO_DB);
+    });
