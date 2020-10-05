@@ -1,14 +1,14 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function (o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
+    Object.defineProperty(o, k2, { enumerable: true, get: function () { return m[k]; } });
+}) : (function (o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
 }));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function (o, v) {
     Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
+}) : function (o, v) {
     o["default"] = v;
 });
 var __importStar = (this && this.__importStar) || function (mod) {
@@ -40,37 +40,37 @@ const App = () => {
         e.preventDefault();
         API_1.addTodo(formData)
             .then(({ status, data }) => {
-            if (status !== 201) {
-                throw new Error("Error! Todo not saved");
-            }
-            setTodos(data.todos);
-        })
+                if (status !== 201) {
+                    throw new Error("Error! Todo not saved");
+                }
+                setTodos(data.todos);
+            })
             .catch(err => console.log(err));
     };
     const handleUpdateTodo = (todo) => {
         API_1.updateTodo(todo)
             .then(({ status, data }) => {
-            if (status !== 200) {
-                throw new Error("Error! Todo not updated");
-            }
-            setTodos(data.todos);
-        })
+                if (status !== 200) {
+                    throw new Error("Error! Todo not updated");
+                }
+                setTodos(data.todos);
+            })
             .catch(err => console.log(err));
     };
     const handleDeleteTodo = (_id) => {
         API_1.deleteTodo(_id)
             .then(({ status, data }) => {
-            if (status !== 200) {
-                throw new Error("Error! Todo not deleted");
-            }
-            setTodos(data.todos);
-        })
+                if (status !== 200) {
+                    throw new Error("Error! Todo not deleted");
+                }
+                setTodos(data.todos);
+            })
             .catch(err => console.log(err));
     };
     return (<main className='App'>
-            <h1>My Todos</h1>
-            <AddToDo_1.default saveTodo={handleSaveTodo}/>
-            {todos.map((todo) => (<TodoItem_1.default key={todo._id} updateTodo={handleUpdateTodo} deleteTodo={handleDeleteTodo} todo={todo}/>))}
-        </main>);
+        <h1>My Todos</h1>
+        <AddToDo_1.default />
+        {todos.map((todo) => (<TodoItem_1.default key={todo._id} updateTodo={handleUpdateTodo} deleteTodo={handleDeleteTodo} todo={todo} />))}
+    </main>);
 };
 exports.default = App;
